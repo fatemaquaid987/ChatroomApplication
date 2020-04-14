@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}ALL chatrooms!|{{ super() }}{% endblock %}
+
+{% block body %}
+    <h1> Chatrooms </h1>
+	<ul>
+		{% for c in chatrooms %}
+			<li><a href="/chatroom/{{ c.chatroom_name }}">{{ c.chatroom_name }}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}

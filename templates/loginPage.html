@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Log in!|{{ super() }}{% endblock %}
+
+{% block body %}
+        <h2> Log in </h2>
+		<form action="" method="post">
+			Username:  <input type="text" name="user" value="{{ request.form.user}}"/>
+			<br />
+			Password:  <input type="password" name="pass" />
+			<br />
+			<input type="submit" name = "btn" value="login" />
+		</form>
+		<h2> Sign up </h2>
+		<form action="" method="post">
+			Username:  <input type="text" name="user" value="{{ request.form.user}}"/>
+			<br />
+			Password:  <input type="password" name="pass" />
+			<br />
+			Re-enter Password:  <input type="password" name="pass2" />
+			<br />
+			Email address: <input type="text" name="email" value="{{ request.form.email}}" />
+			<br />
+			<input type="submit" name = "btn" value="signup" />
+		</form>
+		
+{% endblock %}
